@@ -6,10 +6,10 @@ node {
     def RUN_ARTIFACT_DIR="tests/${BUILD_NUMBER}"
     def SFDC_USERNAME
 
-    def HUB_ORG="services@customer.com"
+    def HUB_ORG="vijay@mindzcloud.com"
     def SFDC_HOST = "https://login.salesforce.com"
     def JWT_KEY_CRED_ID = env.JWT_CRED_ID_DH
-    def CONNECTED_APP_CONSUMER_KEY="3MVG9wt4IL4O5wvLOxzuWfeiSkmmTfXu1P42cs.jYguHOPl0XThYtlwBxS6TsNy3D2qA9rrOT2rYnHG6Fw1ec"
+    def CONNECTED_APP_CONSUMER_KEY="3MVG9n_HvETGhr3CCPqAGXhmZ4DO9hsPRbpn03GsQmwsrqjSfERZI5TQn2Gg1GbFmuso38GJuVUTf20DCssDu"
 
     println 'KEY IS' 
     println JWT_KEY_CRED_ID
@@ -51,7 +51,7 @@ node {
 			println(rmsg)
 
             println('Hello from a Job DSL script!')
-           // println('rmsg='+rmsg)
+            println('rmsg='+rmsg)
 
         }
     }
