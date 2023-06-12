@@ -35,7 +35,7 @@ node {
 			println rc
         }
 			// need to pull out assigned username
-                    stage('Deploye Code') {
+                    stage('Validate Code') {
 
 			if (isUnix()) {
 				rmsg = sh returnStatus: true, script: "sfdx force:source:deploy --checkonly --manifest manifest/package.xml -u ${HUB_ORG}"
