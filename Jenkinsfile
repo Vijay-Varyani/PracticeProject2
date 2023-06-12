@@ -33,9 +33,8 @@ node {
             if (rc != 0) { error 'hub org authorization failed' }
 
 			println rc
-        }
+        
 			// need to pull out assigned username
-                    stage('Validate Code') {
 
 			if (isUnix()) {
 				rmsg = sh returnStatus: true, script: "sfdx force:source:deploy --checkonly --manifest manifest/package.xml -u ${HUB_ORG}"
@@ -43,7 +42,7 @@ node {
 			   rmsg = bat returnStatus: true, script: "sfdx force:source:deploy --checkonly --manifest manifest/package.xml -u ${HUB_ORG}"
 			}
             if(rmsg != 0) { error 'Validate Failed' }
-                    }
+                    
            /* if (isUnix()) {
 				rmsg = sh returnStatus: true, script: "sfdx force:source:deploy  --manifest manifest/package.xml -u ${HUB_ORG}"
 			}else{
@@ -57,3 +56,4 @@ node {
 
         }
     }
+}
