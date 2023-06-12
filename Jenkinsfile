@@ -37,9 +37,9 @@ node {
 			// need to pull out assigned username
 
 			if (isUnix()) {
-				rmsg = sh returnStatus: true, script: " --checkonly --manifest manifest/package.xml -u ${HUB_ORG}"
+				rmsg = sh returnStatus: true, script: "sfdx force:source:checkonly  --manifest manifest/package.xml -u ${HUB_ORG}"
 			}else{
-			   rmsg = bat returnStatus: true, script: " --checkonly --manifest manifest/package.xml -u ${HUB_ORG}"
+			   rmsg = bat returnStatus: true, script: "sfdx force:source:checkonly  --manifest manifest/package.xml -u ${HUB_ORG}"
 			}
             if(rmsg != 0) { error 'Validate Failed' }
                     
