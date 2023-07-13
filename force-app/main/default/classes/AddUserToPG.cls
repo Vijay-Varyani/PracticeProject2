@@ -5,7 +5,7 @@ public class AddUserToPG {
         //1st n 2nd query for reterving Public and chatter Group Resp
         Group grp=[Select Id,Name from Group where DeveloperName='All_Users'];
         
-         
+        //DemoKT
         List<User> userUpdate=[Select Id,Name from User where id in:userIds];
        // List<CollaborationGroup> cg=[Select Id,Name from CollaborationGroup  where id in:userIds];
         if(userUpdate.size()>0){
